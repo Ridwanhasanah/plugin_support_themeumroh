@@ -58,7 +58,7 @@ echo "</pre>";*/
                   	<ul>
                   
                   		<li>
-                  			<a href="<?php echo $pagenow.'?page=delete-'.$id;?>" onclick="return confirm(\'Yakin ?\')">Delete</a>
+                  			<a  href="<?php echo $pagenow.'?page=delete-'.$id;?>" onclick="return confirm(\'Yakin ?\')">Delete</a>
                   		</li>
                   		<li>
                   			&nbsp; | &nbsp;

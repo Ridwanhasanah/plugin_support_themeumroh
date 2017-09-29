@@ -7,11 +7,12 @@ echo "</pre>";
 $name_service    = $_POST['name_service'];
 $ppp             = $_POST['ppp'];
 $destination     = $_POST['destination'];
+$duration        = $_POST['duration'];
 $price           = $_POST['price'];
 $airlines        = $_POST['airlines'];
 $hotel           = $_POST['hotel'];
 $hotelroom       = $_POST['hotelroom']; 
-$full_name       = $_POST['name'];
+$full_name       = $_POST['full_name'];
 $gender          = $_POST['gender'];
 $date_birth      = $_POST['date_birth'];
 $born            = $_POST['born'];
@@ -85,11 +86,12 @@ if (isset($_POST['submit'])) {
    );
 
    echo "<pre>";
-   print_r($update);
+   //print_r($update);
    echo "</pre>";
 
 
    if ($update) {
+      echo '<div class="updated"><p><srong>Option Saved.</p><strong></div>';
       ?>
       <script type="text/javascript">
          alert('Berhasil');

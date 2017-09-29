@@ -36,7 +36,7 @@ echo '<h1>Edit Pendaftar Umroh</h1>';
                </tr>
                <tr>
                   <td>Hotel </td>
-                  <td><input type="text" value="<?= $dbid[0]->hotel;?>" name="hotel"></td>
+                  <td><input type="text" name="hotel" value="<?= $dbid[0]->hotel;?>"></td>
                </tr>
                <tr>
                   <td>Kamar Hotel </td>
@@ -52,18 +52,18 @@ echo '<h1>Edit Pendaftar Umroh</h1>';
                   <td><b><i><input type="text" name="full_name" value="<?= $dbid[0]->full_name?>"></i></b></td>
                </tr>
                <td>Jenis Kelamin </td>
-               <td><input type="text" name="gender" value="<?= $dbid[0]->gender;?>"></td>
+               <td><input placeholder="Pria / Wanita" type="text" name="gender" value="<?= $dbid[0]->gender;?>"></td>
             </tr>
             <tr>
                <td>Tempat Tanggal Lahir </td>
                <td>
-                  <input type="text" name="born" value="<?= $dbid[0]->born;?>">, 
-                  <input type="text" name="date_birth" value="<?= $dbid[0]->date_birth;?>">
+                  <input  type="text" name="born" value="<?= $dbid[0]->born;?>">, 
+                  <input class="datePicker" type="text" name="date_birth" value="<?= $dbid[0]->date_birth;?>">
                </td>
             </tr>
             <tr>
                <td>Status </td>
-               <td><input type="text" value="<?= $dbid[0]->status;?>" name="status"></td>
+               <td><input placeholder="Single / Menikah" type="text" value="<?= $dbid[0]->status;?>" name="status"></td>
             </tr>
          </table>
       </div>
@@ -113,11 +113,11 @@ echo '<h1>Edit Pendaftar Umroh</h1>';
             </tr>
             <tr>
                <td>Tanggal Keluar Passport</td>
-               <td><input type="text" name="date_passport" value="<?= $dbid[0]->date_passport;?>"></td>
+               <td><input class="datePicker" type="text" name="date_passport" value="<?= $dbid[0]->date_passport;?>"></td>
             </tr>
             <tr>
                <td>Tanggal Habis Passport</td>
-               <td><input type="text" name="ex_passport" value="<?= $dbid[0]->ex_passport;?>"></td>
+               <td><input class="datePicker" type="text" name="ex_passport" value="<?= $dbid[0]->ex_passport;?>"></td>
             </tr>
             <tr>
                <td>Kantor Imigrasi Passport</td>
@@ -143,6 +143,7 @@ echo '<h1>Edit Pendaftar Umroh</h1>';
          </table>
       </div>
    </div>
-   <input class="button" type="submit" name="submit" value="Save">
+   <input class="button button-primary" type="submit" name="submit" value="Save Changes">
 </form>
+<dir style="clear: both;"></dir>
 <?php require_once(plugin_dir_path(__FILE__) . '../Model/edit.php'); ?>
